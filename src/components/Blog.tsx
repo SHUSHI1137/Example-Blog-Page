@@ -20,8 +20,11 @@ const Blog = ({ blog }: IBlogProps) => {
         </div>
         <div className="flex flex-wrap mt-auto gap-x-4 gap-y-2">
           {blog.tags.map((tag, index) => (
-            <div key={index} className="tag">
-              #{tag}
+            <div
+              className="w-max text-typography-description px-[0.625rem] py-[0.1563rem] h-auto border-[0.0313rem] border-typography-description rounded-full tracking-widest font-montserrat text-sm font-bold whitespace-nowrap transition duration-300 hover:text-typography-title border-typography-title bg-slate-200"
+              key={index}
+            >
+              <a href={tag}>#{tag}</a>
             </div>
           ))}
         </div>
